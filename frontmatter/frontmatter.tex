@@ -1,0 +1,169 @@
+%-----------------------------------------%
+% O frontmmatter são as chamadas páginas iniciais, terá de atualizar as respetivas secções.
+%-----------------------------------------%
+
+%-----------------------------------------%
+%--------CONFIGURAÇÃO INICIAL-------------%
+%-----------------------------------------%
+
+\input{frontmatter/glossary}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+
+%-----------------------------------------%
+%-----------CAPA e CONTRA CAPA-------------------------%
+%-----------------------------------------%
+
+\makethetitlepage
+
+
+\makeconttitlepage
+
+
+
+%-----------------------------------------%
+%-----------EPÍGRAFE-------------------------%
+%-----------------------------------------%
+\begin{epigraph}
+\null \vfill
+\begin{flushright}
+
+A epígrafe traduz-se pela inscrição de sentença conceituosa que, de algum modo inspirou o autor na elaboração do trabalho ou nas suas ações correntes, e que o mesmo considere importante revelar no trabalho. Tem uma natureza facultativa.
+
+\end{flushright}
+\vfill \null%
+\end{epigraph}%
+
+
+%-----------------------------------------%
+%-----------DEDICATÓRIA-------------------------%
+%-----------------------------------------%
+\begin{dedicatory}
+\null \vfill
+\begin{flushright}
+
+
+A dedicatória tem por finalidade prestar homenagem ou dedicar o trabalho a alguém próximo ou que tenha um especial significado para o autor do trabalho. É, também, um elemento facultativo na estrutura do trabalho, mas é usual que seja feita dedicando o trabalho aos pais, à família mais chegada ou a alguém com relevância especial na vida do autor. 
+
+
+\end{flushright}
+\vfill \null%
+\end{dedicatory}%
+
+
+%-----------------------------------------%
+%-----------AGRADECIMENTOS-------------------------%
+%-----------------------------------------%
+\begin{acknowledgements}
+
+Agradecimento é a expressão registada de uma gratidão às pessoas, entidades ou instituições que, de algum modo, contribuíram para a elaboração do trabalho. Sendo um elemento opcional, quando exista deve incluir-se na frente de folha a colocar logo após a folha de rosto ou das folhas da epígrafe e/ou da dedicatória, deixando o verso em branco.
+
+\end{acknowledgements}%
+
+
+
+%-----------------------------------------%
+%-----------RESUMO-------------------------%
+%-----------------------------------------%
+\begin{abstract}
+
+\noindent \textbf{\ Subtítulo caso queira!}
+
+\noindent Segue-se, com caráter obrigatório, um resumo em língua portuguesa e em língua inglesa (abstract), cada um deles com um máximo de 300 palavras.
+Após cada um dos resumos devem ser indicadas cinco palavras-chave – português e inglês – para indexação futura.
+
+
+% As palavras chave terão de ser definidas no ficheiro main.tex depois da linha de código keywords
+\end{abstract}
+
+
+%-----------------------------------------%
+%-----------ABSTRACT-------------------------%
+%-----------------------------------------%
+
+\begin{abstractotherlanguage}
+
+\noindent \textbf{\ Subtitle if you want}
+
+\noindent Write here the abstract.
+
+\noindent \newline Key words:
+
+\end{abstractotherlanguage}
+
+
+%-----------------------------------------%
+%--ÍNDICE DE CONTEÚDO / FIGURAS / TABELAS-%
+%-----------------------------------------%
+
+\tableofcontents % Imprime o índice principal
+
+\listoffigures % Imprime a lista de figuras
+
+\listoftables % Imprime a lista de tabelas
+
+\iflanguage{portuguese}{
+\renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
+}
+\listofalgorithms % Imprime a lista de algoritmos
+%\addchaptertocentry{\listalgorithmname} %Uncomment para mostrar no índice a lista de algoritmos
+
+
+\renewcommand{\lstlistlistingname}{List of Source Code}
+\iflanguage{portuguese}{
+\renewcommand{\lstlistlistingname}{Lista de C\'odigo}
+}
+\lstlistoflistings % Imprime a lista de listagens (código-fonte da linguagem de programação)
+
+%\addchaptertocentry{\lstlistlistingname} %Uncomment para mostrar a lista de de codigo no indice
+
+
+%-----------------------------------------%
+%------------ABREVIATURAS-----------------%
+%-----------------------------------------%
+%\begin{abbreviations}{ll} % IncluI uma lista de abreviações (uma tabela de duas colunas)
+
+%%\textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere\\
+%%\textbf{WSF} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or\\
+%\end{abbreviations}
+
+%-----------------------------------------%
+%------------SÍMBOLOS-----------------%
+%-----------------------------------------%
+
+\begin{symbols}{lll} % IncluI uma lista de símbolos (uma tabela de três colunas)
+
+$a$ & distance & \si{\meter} \\
+$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%Símbolo, nome e unidade \\
+
+\addlinespace % espaçamento para separar os símbolos romanos dos grego
+
+$\omega$ & angular frequency & \si{\radian} \\
+
+\end{symbols}
+
+
+
+%-----------------------------------------%
+%-----------ACRÓNIMOS----------------%
+%-----------------------------------------%
+
+\newcommand{\listacronymname}{List of Acronyms}
+\iflanguage{portuguese}{
+\renewcommand{\listacronymname}{Lista de Acr\'onimos}
+}
+
+%Use GLS
+\glsresetall
+\printglossary[title=\listacronymname,type=\acronymtype,style=long]
+
+%----------------------------------------------------------------------------------------
+%	DONE
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Começar numeração da página com numéros árabes (1,2,3 ...)
+\pagestyle{thesis} % Colocar os cabeçalhos nas páginas com o estilo defenido para o corpo da tese
