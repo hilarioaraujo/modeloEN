@@ -1,16 +1,16 @@
-%Modelo da Dissertação de Mestrado da EN
+% Modelo da Dissertação de Mestrado da Escola Naval
 % TMDEI Thesis EN Style
 % 
-% Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
+% Baseado em MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
 % Johannes Böttcher, downloaded from (21/11/15):
 % http://www.LaTeXTemplates.com
 %
-% Authors:
+% Autores:
 %  Vel (vel@ latextemplates. com)
 %  Johannes Böttcher%
 %
-% Adapted to Thesis EN Style (JUL/2019) by 
-%  HILÁRIO ARAÚJO (rocha.araujo@marinha.pt) 
+%  Adaptado para Thesis EN Style (JUL/2019) por 
+%  Hilário Araújo (rocha.araujo@marinha.pt) 
 %  Ricardo Moura (ricardo.pinto.moura@marinha.pt)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,24 +19,24 @@
 %    CONFIGURAÇÃO INICIAl
 %-----------------------------------------%
 
-\documentclass[12pt, % O tamanho da fonte do documento padrão, opções: 10pt, 11pt, 12pt
-%oneside, % Dois lados (margens alternadas) para ligação por padrão, uncomment a mudar para um lado (para fins de desenho / leitura)
-portuguese, %portuguese,% for Portuguese; english for English; delete temporary files if you change language (e.g. 'make clean; make')
-singlespacing, % Espaçamento de linha única, alternativas: onehalfspacing or doublespacing (para fins de redação / leitura)
-%draft, % Uncomment para ativar o modo de rascunho (sem imagens, sem links, caixas de texto overfull indicadas)
-%nolistspacing, % Se o documento for de meio-espaço ou de espaçamento duplo, uncomment para definir o espaçamento nas listas como único
-%liststotoc, % Uncomment para adicionar a lista de figuras / tabelas / etc ao índice (não recomendado)
-%toctotoc, % Uncomment para adicionar o índice principal ao índice (não recomendado)
+\documentclass[12pt, % O tamanho da fonte do documento padrão, opções: 10pt, 11pt (ter-se-ia que mudar tipo de letra para Arial) , 12pt (relembra-se que 12pt é o que está estipulado nas normas)
+%oneside, % Dois lados (margens alternadas) para ligação por padrão, descomentar  para mudar para um lado (para desenho / leitura)
+portuguese, %portuguese,% para Português; english para Inglês; Se mudar a língua convém apagar ficheiros temporários (e.g. 'make clean; make')
+onehalfspacing, % espaçamento e meio, alternativas: singlespacing - Espaçamento de linha única; doublespacing (para fins de redação / leitura)
+%draft, % Descomentar para ativar o modo de rascunho (sem imagens, sem links, caixas de texto overfull indicadas)
+%nolistspacing, % Se o documento for de meio-espaço ou de espaçamento duplo, descomentar para definir o espaçamento nas listas como único
+%liststotoc, % Descomentar para adicionar a lista de figuras / tabelas / etc ao índice (não recomendado)
+%toctotoc, % Descomentear para adicionar o índice principal ao índice (não recomendado)
 parskip, % Adicione espaço entre parágrafos (recomendado)
-%nohyperref, % Uncomment para não carregar o pacote hyperref (não recomendado)
-nohyperreflinkcolor, % links de hyperref não são coloridos (comment para links de cores, por exemplo, para produzir uma versão somente eletrônica)
-headsepline, % Uncomment para obter uma linha sob o cabeçalho
+%nohyperref, % Descomentar para não carregar o pacote hyperref (não recomendado)
+nohyperreflinkcolor, % links de hyperref (ligação à referência) não são coloridos (comentar para links de cores, por exemplo, para produzir uma versão somente eletrónica)
+headsepline, % Descomentar para obter uma linha sob o cabeçalho
 ]{enStyle} % O arquivo de classe que especifica a estrutura do documento
 
-\usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
-%\usetikzlibrary{arrows} % Required for fancy arrows in TiKZ graphics (can be removed if not used)
+\usepackage{tikz} % Em caso de necessidade para criar gráficos automaticamente na página (pode remover se tiver apenas gráficos por imagem)
+%\usetikzlibrary{arrows} % Necessário se quiser inserir setas do pacote TiKZ (pode remover se não usar)
 
-\usepackage{pgfplots} % Required for drawing high--quality function plots (can be removed if not used)
+\usepackage{pgfplots} % Necessário se quiser desenhar plots de alta qualidade (pode remover se não usar)
 \pgfplotsset{compat=newest}
 
 %
@@ -73,7 +73,7 @@ headsepline, % Uncomment para obter uma linha sob o cabeçalho
 
 \supervisor{Nome do \textsc{Orientador}} % O nome do seu supervisor, isto é usado na página da contra capa,  poderá referenciar-lo ao longo do seu trabalho com o comando (\supname)
 
-%\cosupervisor{Dr. Jack \textsc{Smith}} % O nome do seu co-orientador, isto é usado na página da contra capa,  poderá referenciar-lo ao longo do seu trabalho com o comando (\cosupname) (comenta, se não tiveres co-orientador)
+\cosupervisor{Dr. Jack \textsc{Smith}} % O nome do seu co-orientador, isto é usado na página da contra capa,  poderá referenciar-lo ao longo do seu trabalho com o comando (\cosupname) (comenta, se não tiveres co-orientador)
 
 \keywords{Palavra-chave 1, ..., Palavra-chave 2} % Defina até 6 palavras-chave que descrevam melhor o seu trabalho, e poderá referenciar-las ao longo do seu trabalho com o comando (\keywordnames)
 

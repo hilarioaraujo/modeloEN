@@ -10,7 +10,8 @@
 %  Johannes Böttcher
 %
 % Adapted to Thesis EN Style (JUL/2019) by 
-%  HILÁRIO ARAÚJO (rocha.araujo@marinha.pt) 
+%  Hilário Araújo (rocha.araujo@marinha.pt) 
+%  Ricardo Moura (ricardo.pinto.moura@marinha.pt)
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (main.tex).
@@ -194,7 +195,8 @@
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
-\RequirePackage[acronym,nonumberlist,toc]{glossaries} %Required to define acronyms and make glossaries
+%\RequirePackage[acronym,nonumberlist,toc]{glossaries} %Required to define acronyms and make glossaries
+\RequirePackage[acronym,nonumberlist]{glossaries} %Without acronym list in de toc
 
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
@@ -402,25 +404,38 @@ KOMA-script documentation for details.}]{fancyhdr}
 	
 	\vfill
 	% Assinaturas
-    \begin{minipage}{0.6\textwidth}%
-        \emph{O Aluno Mestrando,}\\[2.08cm]
-        
-        \begin{picture}(5,20)(0,-22.5) 
-            % \put(0,1){\includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}
-            \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-            \put(0,-22.5){\authorname}
-        \end{picture}
-    \end{minipage}%
-    \hspace{0.5cm}%
-    \begin{minipage}{0.6\textwidth}%
-        \emph{O Orientador,}\\[2.08cm]
-        
-        \begin{picture}(130,20)(0,-22.5)
-            % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
-            \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-            \put(0,-22.5){\supname}
-        \end{picture}
-    \end{minipage}
+	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
+	\begin{tabular}{c c}
+        \hspace{-1.4cm}\begin{minipage}{0.6\textwidth}%
+            \emph{O Aluno Mestrando,}\\[2.08cm]
+            
+            \begin{picture}(5,20)(0,-22.5) 
+                % \put(0,1){\includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}
+                \put(0,0){\rule{0.5\linewidth}{0.5mm}}
+                \put(0,-22.5){\authorname}
+            \end{picture}
+        \end{minipage}%
+        \hspace{1.3cm}%
+        \begin{minipage}{0.6\textwidth}%
+            \emph{O Orientador,}\\[2.08cm]
+            
+            \begin{picture}(130,20)(0,-22.5)
+                % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
+                \put(0,0){\rule{0.5\linewidth}{0.5mm}}
+                \put(0,-22.5){\supname}
+            \end{picture}
+            
+            % Caso não tenha co-orientador comente daqui...
+            \vspace{0.5cm}
+            \emph{O Co-orientador,}\\[2.08cm]
+            \begin{picture}(250,20)(0,-22.5)
+                % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
+                \put(0,0){\rule{0.5\linewidth}{0.5mm}}
+                \put(0,-22.5){\cosupname}
+            \end{picture}
+            % ...até aqui
+        \end{minipage}
+    \end{tabular}
 
 	\begin{center}
 	    \vfill
