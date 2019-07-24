@@ -105,15 +105,26 @@ headsepline, % Descomentar para obter uma linha sob o cabeçalho
 %	CORPO DA TESE
 %----------------------------------------------------------------------------------------
 
+%Introcução - Obrigatória
+\input{chapters/introduction/introduction}
+
 % Inclui os capítulos da tese como das respetivas pastas separadas por cada capítulo
 % Uncomment os capítulos à medida que vais criando novos.
 
-\input{ch1/chapter1}
-\input{ch2/chapter2}
-\input{ch3/chapter3}
+\pagestyle{thesis} % Colocar os cabeçalhos nas páginas com o estilo definido para o corpo da tese
+
+
+\input{chapters/ch1/chapter1}
+\input{chapters/ch2/chapter2}
+\input{chapters/ch3/chapter3}
 %\input{ch4/chapter4}
 %\input{ch5/chapter5}
 
+
+\pagestyle{plain}
+
+%Conclusão - Obrigatória
+\input{chapters/conclusion/conclusion}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAFIA

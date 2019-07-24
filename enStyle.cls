@@ -592,6 +592,40 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 %----------------------------------------------------------------------------------------
+%	INTRODUCTION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\introductionlabel}{Introduction}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\introductionlabel}{Introduction} % introduction text for English countries
+\providecaptionname{portuguese} {\introductionlabel}{Introdução}
+\newenvironment{introduction}{
+	\addchaptertocentry{\introductionlabel} % Add the introduction to the table of contents
+	\tttypeout{\introductionlabel}
+	\thispagestyle{plain}
+	\chapter*{\introductionlabel}
+}
+
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION PAGE DESIGN
+%----------------------------------------------------------------------------------------
+\newcommand{\conclusionlabel}{Conclusion}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\conclusionlabel}{Conclusion} % conclusion text for English countries
+\providecaptionname{portuguese} {\conclusionlabel}{Conclusão}
+\newenvironment{conclusion}{
+	\addchaptertocentry{\conclusionlabel} % Add the conclusion to the table of contents
+	\tttypeout{\conclusionlabel}
+	\thispagestyle{plain}
+	\chapter*{\conclusionlabel}
+}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+%----------------------------------------------------------------------------------------
 %	TOC BABEL CORRECTIONS - PORTUGAL
 %----------------------------------------------------------------------------------------
 
