@@ -319,6 +319,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand*{\university}[1]{\def\univname{#1}}
 \newcommand*{\department}[1]{\def\deptname{#1}}
 \newcommand*{\keywords}[1]{\def\keywordnames{#1}}
+\newcommand*{\conkeywords}[1]{\def\conkeywordnames{#1}}
 
 %----------------------------------------------------------------------------------------
 %	TITLEPAGE PAGE DESIGN
@@ -368,12 +369,21 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	CONTRA - TITLEPAGE PAGE DESIGN
 %----------------------------------------------------------------------------------------
-\newcommand{\supervisorlabel}{Supervisor}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
-\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
-\newcommand{\cosupervisorlabel}{Co-Supervisor}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{Co-Supervisor}
-\providecaptionname{portuguese}{\cosupervisorlabel}{Co-Orientador}
+\newcommand{\supervisorlabel}{The Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{The Supervisor}
+\providecaptionname{portuguese}{\supervisorlabel}{O Orientador}
+
+\newcommand{\cosupervisorlabel}{The Co-Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{The Co-Supervisor}
+\providecaptionname{portuguese}{\cosupervisorlabel}{O Co-Orientador}
+
+\newcommand{\mestrandolabel}{The Master Student}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\mestrandolabel}{The Master Student}
+\providecaptionname{portuguese}{\mestrandolabel}{O Aluno Mestrando}
+
+\newcommand{\orientationlabel}{Orientation of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\orientationlabel}{Orientation of}
+\providecaptionname{portuguese}{\orientationlabel}{Orientação de}
 
 \newcommand{\makeconttitlepage}{
 	\checktoopen
@@ -400,14 +410,14 @@ KOMA-script documentation for details.}]{fancyhdr}
     	\vspace{1cm}
 	\end{center}
 	
-	{\large \bfseries Orientação de: \supname}
+	{\large \bfseries \orientationlabel: \supname}
 	
 	\vfill
 	% Assinaturas
 	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
 	\begin{tabular}{c c}
         \hspace{-1.4cm}\begin{minipage}{0.6\textwidth}%
-            \emph{O Aluno Mestrando,}\\[2.08cm]
+            \emph{\mestrandolabel,}\\[2.08cm]
             
             \begin{picture}(5,20)(0,-22.5) 
                 % \put(0,1){\includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}
@@ -417,7 +427,7 @@ KOMA-script documentation for details.}]{fancyhdr}
         \end{minipage}%
         \hspace{1.3cm}%
         \begin{minipage}{0.6\textwidth}%
-            \emph{O Orientador,}\\[2.08cm]
+            \emph{\supervisorlabel,}\\[2.08cm]
             
             \begin{picture}(130,20)(0,-22.5)
                 % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
@@ -427,7 +437,7 @@ KOMA-script documentation for details.}]{fancyhdr}
             
             % Caso não tenha co-orientador comente daqui...
             \vspace{0.5cm}
-            \emph{O Co-orientador,}\\[2.08cm]
+            \emph{\cosupervisorlabel,}\\[2.08cm]
             \begin{picture}(250,20)(0,-22.5)
                 % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
                 \put(0,0){\rule{0.5\linewidth}{0.5mm}}
@@ -504,6 +514,11 @@ KOMA-script documentation for details.}]{fancyhdr}
   \vfil\vfil\vfil\null
 }
 
+
+\newcommand{\conkeywordslabel}{Keywords}
+\providecaptionname{portuguese}{\conkeywordslabel}{Keywords}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\conkeywordslabel}{Palavras-chave}
+
 \newcommand{\abslabelotherlang}{Resumo}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
 \providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
@@ -515,6 +530,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\chapter*{\abslabelotherlang}
 }
 {
+  \bigskip
+  {\noindent \bf \conkeywordslabel:} {\conkeywordnames}
   \vfil\vfil\vfil\null
 }
 
