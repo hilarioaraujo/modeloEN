@@ -48,3 +48,8 @@ Make sure you have the following tools installed: **pdflatex**, **makeglossaries
 
 * Hilário Araújo (rocha.araujo@marinha.pt) and 
 * Ricardo Moura (ricardo.pinto.moura@marinha.pt)
+
+## Tutoriais: ##
+Texmaker: https://www.xm1math.net/texmaker/doc.html
+Overleaf: https://www.overleaf.com/learn
+Youtube:  https://www.youtube.com/playlist?list=PLB6oieQ9gzTRyQQJh8XPi1kHsNcpPyndk
