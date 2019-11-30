@@ -307,6 +307,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \def\authorname{}
 \def\ttitle{}
+\newcommand*{\authorshort}[1]{\def\authorshortname{#1}}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\cosupervisor}[1]{\def\cosupname{#1}}
 \newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
@@ -398,7 +399,7 @@ KOMA-script documentation for details.}]{fancyhdr}
             \null\vfil
 	\begin{center}
         \vspace{3.5cm}
-    	{\Large \bfseries \authorname} \\
+    	{\Large \bfseries \authorshortname} \\
     	
     	\vspace{1.5cm}
     	{\Large \bfseries \ttitle} \\ % Thesis title
