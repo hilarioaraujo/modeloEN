@@ -309,7 +309,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 \def\ttitle{}
 \newcommand*{\authorshort}[1]{\def\authorshortname{#1}}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
+\newcommand*{\supervisorshort}[1]{\def\supsname{#1}}
 \newcommand*{\cosupervisor}[1]{\def\cosupname{#1}}
+\newcommand*{\cosupervisorshort}[1]{\def\cosupsname{#1}}
 \newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
 \newcommand*{\thesissubtitle}[1]{\def\tsubtitle{#1}}
 \newcommand*{\subjectarea}[1]{\def\subjectname{#1}}
@@ -386,6 +388,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\orientationlabel}{Orientation of}
 \providecaptionname{portuguese}{\orientationlabel}{Orientação de}
 
+\newcommand{\coorientationlabel}{Co-orientation of}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\orientationlabel}{Orientation of}
+\providecaptionname{portuguese}{\orientationlabel}{Co-orientação de}
+
 \newcommand{\makeconttitlepage}{
 	\checktoopen
 	\begin{titlingpage}
@@ -406,13 +412,13 @@ KOMA-script documentation for details.}]{fancyhdr}
     	\vspace{1.5cm}
     	\ifdefined\tsubtitle {\large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
 
-    	\vspace{1.5cm}
+    	\vspace{1cm}
     	{\large \bfseries \dissertationdisclamer~\subjectname}
     	\vspace{1cm}
 	\end{center}
 	
-	{\large \bfseries \orientationlabel: \supname}
-	
+	{\large \bfseries \orientationlabel: \mdseries \supname}
+	{\ifdefined\tsubtitle {\\ \indent \large \bfseries \coorientationlabel: \mdseries \cosupname}}
 	\vfill
 	% Assinaturas
 	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
@@ -433,7 +439,7 @@ KOMA-script documentation for details.}]{fancyhdr}
             \begin{picture}(130,20)(0,-22.5)
                 % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
                 \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-                \put(0,-22.5){\supname}
+                \put(0,-22.5){\supsname}
             \end{picture}
             
             % Caso não tenha co-orientador comente daqui...
@@ -442,7 +448,7 @@ KOMA-script documentation for details.}]{fancyhdr}
             \begin{picture}(250,20)(0,-22.5)
                 % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
                 \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-                \put(0,-22.5){\cosupname}
+                \put(0,-22.5){\cosupsname}
             \end{picture}
             % ...até aqui
         \end{minipage}
