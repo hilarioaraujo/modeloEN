@@ -352,8 +352,8 @@ KOMA-script documentation for details.}]{fancyhdr}
     	\vspace{1.5cm}
     	{\Large \bfseries \ttitle} \\ % Thesis title
     	
-    	\vspace{1.5cm}
-    	\ifdefined\tsubtitle {\large \bfseries \tsubtitle} \fi % Thesis sub title, if exists
+    	
+    	\ifdefined\tsubtitle {\vspace{1.5cm} \large \bfseries \tsubtitle} \fi % Thesis sub title, if exists
 
     	\vspace{1.5cm}
     	{\large \bfseries \dissertationdisclamer~\subjectname}
@@ -405,12 +405,12 @@ KOMA-script documentation for details.}]{fancyhdr}
             \null\vfil
 	\begin{center}
         \vspace{3.5cm}
-    	{\Large \bfseries \authorshortname} \\
+    	{\Large \bfseries \authorname} \\
     	
     	\vspace{1.5cm}
     	{\Large \bfseries \ttitle} \\ % Thesis title
-    	\vspace{1.5cm}
-    	\ifdefined\tsubtitle {\large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
+    	
+    	\ifdefined\tsubtitle {\vspace{1.5cm} \large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
 
     	\vspace{1cm}
     	{\large \bfseries \dissertationdisclamer~\subjectname}
@@ -418,7 +418,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\end{center}
 	
 	{\large \bfseries \orientationlabel: \mdseries \supname}
-	{\ifdefined\tsubtitle {\\ \indent \large \bfseries \coorientationlabel: \mdseries \cosupname}}
+	{\ifdefined\cosupsname {\\ \indent \large \bfseries \coorientationlabel: \mdseries \cosupname}}
 	\vfill
 	% Assinaturas
 	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
@@ -429,7 +429,7 @@ KOMA-script documentation for details.}]{fancyhdr}
             \begin{picture}(5,20)(0,-22.5) 
                 % \put(0,1){\includegraphics[scale=0.13]{figs/assinatura-aluno.jpg}}
                 \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-                \put(0,-22.5){\authorname}
+                \put(0,-22.5){\authorshortname}
             \end{picture}
         \end{minipage}%
         \hspace{1.3cm}%
