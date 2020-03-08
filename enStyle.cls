@@ -664,9 +664,11 @@ KOMA-script documentation for details.}]{fancyhdr}
   \gdef\annexname{Anexo}
   \gdef\annexnamepl{Anexos}
   \gdef\appendixnamepl{Apêndices}
+  \gdef\listacronymname{Lista de Acrónimos}
 }
 
 \addto\captionsenglish{%
+  \gdef\listacronymname{List of Acronyms}
   \def\lstlistlistingname{List of Source Code}%
   \def\lstlistingname{Source Code}%
   \def\listalgorithmname{List of Algorithms}%
