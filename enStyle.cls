@@ -656,8 +656,10 @@ KOMA-script documentation for details.}]{fancyhdr}
 \addto\captionsportuguese{%
   \def\contentsname{Índice}%
   \def\indexname{Índice Remissivo}%
-  \def\lstlistlistingname{Listagens}%
-  \def\lstlistingname{Listagem}%
+  \def\lstlistlistingname{Lista de Código Fonte}%
+  \def\lstlistingname{Código Fonte}%
+  \def\listalgorithmname{Lista de Algoritmos}%
+  \def\algorithmname{Algoritmo}%
   \defineshorthand{"-}{\babelhyphen{repeat}}% generates a hyphen that will repeat on a new line
   \gdef\annexname{Anexo}
   \gdef\annexnamepl{Anexos}
@@ -665,12 +667,15 @@ KOMA-script documentation for details.}]{fancyhdr}
 }
 
 \addto\captionsenglish{%
-  \def\lstlistlistingname{Listings}%
-  \def\lstlistingname{Listing}%
+  \def\lstlistlistingname{List of Source Code}%
+  \def\lstlistingname{Source Code}%
+  \def\listalgorithmname{List of Algorithms}%
+  \def\algorithmname{Algorithm}%
   \gdef\annexname{Annex}
   \gdef\annexnamepl{Annexes}
   \gdef\appendixnamepl{Appendices}
 }
+
 
 \renewcommand{\@pnumwidth}{2em} % Corrigir espaço para páginas com numeração romana na ToC
 
