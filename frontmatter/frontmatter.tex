@@ -116,17 +116,9 @@ Para alterar a língua basta ir às configurações do documento no ficheiro \fi
 
 \listoftables % Imprime a lista de tabelas
 
-\iflanguage{portuguese}{
-\renewcommand{\listalgorithmname}{Lista de Algor\'itmos}
-}
 \listofalgorithms % Prints the list of algorithms
 %\addchaptertocentry{\listalgorithmname} %Uncomment para mostrar no índice a lista de algoritmos
 
-
-\renewcommand{\lstlistlistingname}{List of Source Code}
-\iflanguage{portuguese}{
-\renewcommand{\lstlistlistingname}{Lista de C\'odigo}
-}
 \lstlistoflistings % Imprime a lista de listagens (código-fonte da linguagem de programação)
 
 %\addchaptertocentry{\lstlistlistingname} %Uncomment para mostrar a lista de de código no índice
@@ -157,11 +149,6 @@ Para alterar a língua basta ir às configurações do documento no ficheiro \fi
 %----------------------------------------------------------------------------------------
 %	ACRÓNIMOS
 %----------------------------------------------------------------------------------------
-
-\newcommand{\listacronymname}{List of Acronyms}
-\iflanguage{portuguese}{
-\renewcommand{\listacronymname}{Lista de Acr\'onimos}
-}
 
 %Use GLS
 \glsresetall
