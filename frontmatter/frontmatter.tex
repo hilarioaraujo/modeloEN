@@ -102,6 +102,7 @@ Para alterar a língua basta ir às configurações do documento no ficheiro \fi
 % As palavras chave terão de ser definidas no ficheiro main.tex depois da linha de código conkeywords
 
 \end{abstractotherlanguage}
+\checktoopen
 
 
 
@@ -111,10 +112,16 @@ Para alterar a língua basta ir às configurações do documento no ficheiro \fi
 
 \tableofcontents % Imprime o índice principal
 \pdfbookmark[0]{\contentsname}{toc}% Adiciona o índice aos bookmarks do pdf
+\checktoopen
 
 \listoffigures % Imprime a lista de figuras
+\checktoopen
 
 \listoftables % Imprime a lista de tabelas
+\checktoopen
+
+\listofmyequations  %Imprime a lista de equações
+\checktoopen
 
 \listofalgorithms % Prints the list of algorithms
 %\addchaptertocentry{\listalgorithmname} %Uncomment para mostrar no índice a lista de algoritmos

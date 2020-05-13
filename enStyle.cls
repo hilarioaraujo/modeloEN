@@ -138,6 +138,8 @@
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
+\usepackage[bottom]{footmisc}%stay footnote in the bottom
+
 
 \RequirePackage{babel} % Required for automatically changing names of document elements to languages besides english
 
@@ -462,6 +464,19 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\end{titlingpage}%
 }
 
+%----------------------------------------------------------------------------------------
+%	LIST OF EQUATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{tocloft}
+\newcommand{\listequationsname}{List of Equations}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\listequationsname}{List of Equations}
+\providecaptionname{portuguese}{\listequationsname}{Lista de Equações} % Portuguese 
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+\addcontentsline{equ}{myequations}{\protect\numberline{\theequation}#1}}
+\setlength{\cftmyequationsnumwidth}{3em}
+
 
 %----------------------------------------------------------------------------------------
 %	EPIGRAPH PAGE DESIGN
@@ -689,7 +704,14 @@ KOMA-script documentation for details.}]{fancyhdr}
 \RequirePackage{etoolbox}
 \RequirePackage{appendix}
 
+\usepackage{titlesec}
+\newcommand{\appendixheadreset}{
+\titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter\ -\ }{0em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{1cm}
+}
+
 \newcommand{\appendixfile}[1]{%
+	\appendixheadreset
 	\listgadd{\enStyle@appendix@list}{#1}%
 }
 
