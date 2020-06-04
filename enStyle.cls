@@ -400,23 +400,22 @@ KOMA-script documentation for details.}]{fancyhdr}
     	\AddToShipoutPicture*{
             \put(0,0){
             \parbox[b][\paperheight]{\paperwidth}{
-            \vfill
             \centering
-            \includegraphics[width=1.3\textwidth]{/frontmatter/assets/contracapa.jpg}
+            \includegraphics[width=1.3\textwidth]{/frontmatter/assets/contracapa.pdf}
             \vfill}}}
             \null\vfil
 	\begin{center}
-        \vspace{3.5cm}
+        \vspace{8cm}
     	{\Large \bfseries \authorname} \\
     	
-    	\vspace{1.5cm}
+    	\vspace{1cm}
     	{\Large \bfseries \ttitle} \\ % Thesis title
     	
-    	\ifdefined\tsubtitle {\vspace{1.5cm} \large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
+    	\ifdefined\tsubtitle {\vspace{0.5cm} \large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
 
-    	\vspace{1cm}
+    	\vspace{0.5cm}
     	{\large \bfseries \dissertationdisclamer~\subjectname}
-    	\vspace{1cm}
+    	\vspace{0.5cm}
 	\end{center}
 	
 	{\large \bfseries \orientationlabel: \mdseries \supname}
@@ -445,13 +444,13 @@ KOMA-script documentation for details.}]{fancyhdr}
             \end{picture}
             
             % Caso não tenha co-orientador comente daqui...
-            \vspace{0.5cm}
-            \emph{\cosupervisorlabel,}\\[2.08cm]
-            \begin{picture}(250,20)(0,-22.5)
+            %\vspace{0.5cm}
+            %\emph{\cosupervisorlabel,}\\[2.08cm]
+            %\begin{picture}(250,20)(0,-22.5)
                 % \put(18,1){\includegraphics[scale=0.48]{figs/assinatura-orientador.png}}
-                \put(0,0){\rule{0.5\linewidth}{0.5mm}}
-                \put(0,-22.5){\cosupsname}
-            \end{picture}
+                %\put(0,0){\rule{0.5\linewidth}{0.5mm}}
+               % \put(0,-22.5){\cosupsname}
+            %\end{picture}
             % ...até aqui
         \end{minipage}
     \end{tabular}
