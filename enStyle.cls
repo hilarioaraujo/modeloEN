@@ -419,6 +419,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\end{center}
 	
 	{\normalsize \bfseries \orientationlabel: \mdseries \supname}
+	
 	{\ifdefined\cosupsname {\\ \indent \normalsize \bfseries \coorientationlabel: \mdseries \cosupname}}
 	\vfill
 	% Assinaturas
