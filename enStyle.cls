@@ -409,17 +409,17 @@ KOMA-script documentation for details.}]{fancyhdr}
     	{\Large \bfseries \authorname} \\
     	
     	\vspace{1cm}
-    	{\Large \bfseries \ttitle} \\ % Thesis title
+    	{\large \bfseries \ttitle} \\ % Thesis title
     	
     	\ifdefined\tsubtitle {\vspace{0.5cm} \large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
 
     	\vspace{0.5cm}
-    	{\large \bfseries \dissertationdisclamer~\subjectname}
+    	{\normalsize \bfseries \dissertationdisclamer~\subjectname}
     	\vspace{0.5cm}
 	\end{center}
 	
-	{\large \bfseries \orientationlabel: \mdseries \supname}
-	{\ifdefined\cosupsname {\\ \indent \large \bfseries \coorientationlabel: \mdseries \cosupname}}
+	{\normalsize \bfseries \orientationlabel: \mdseries \supname}
+	{\ifdefined\cosupsname {\\ \indent \normalsize \bfseries \coorientationlabel: \mdseries \cosupname}}
 	\vfill
 	% Assinaturas
 	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
