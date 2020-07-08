@@ -353,11 +353,9 @@ KOMA-script documentation for details.}]{fancyhdr}
     	
     	\vspace{1.5cm}
     	{\Large \bfseries \ttitle} \\ % Thesis title
-    	
-    	
-    	\ifdefined\tsubtitle {\vspace{1.5cm} \large \bfseries \tsubtitle} \fi % Thesis sub title, if exists
-
-    	\vspace{1.5cm}
+		\ifdefined\tsubtitle 
+			{\large \bfseries \textit{\tsubtitle} \\ \vspace{1cm}} % Thesis sub title, if exists
+		\fi
     	{\large \bfseries \dissertationdisclamer~\subjectname}
 	\end{center}
 	    \vfill
@@ -406,21 +404,23 @@ KOMA-script documentation for details.}]{fancyhdr}
             \null\vfil
 	\begin{center}
         \vspace{8cm}
-    	{\Large \bfseries \authorname} \\
+    	{\Large \bfseries \authorname \\}
     	
     	\vspace{1cm}
-    	{\large \bfseries \ttitle} \\ % Thesis title
+    	{\large \bfseries \textit{\ttitle} \\}  % Thesis title
     	
-    	\ifdefined\tsubtitle {\vspace{0.5cm} \large \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
-
-    	\vspace{0.5cm}
+		\ifdefined\tsubtitle 
+			{\large \bfseries \textit{\tsubtitle} \\ \vspace{1cm}} % Thesis sub title, if exists
+		\fi
     	{\normalsize \bfseries \dissertationdisclamer~\subjectname}
     	\vspace{0.5cm}
 	\end{center}
 	
 	{\normalsize \bfseries \orientationlabel: \mdseries \supname}
+	\ifdefined\cosupname 
+		{\\ \indent \normalfont \bfseries \coorientationlabel \mdseries \cosupname}
+	\fi
 	
-	{\ifdefined\cosupsname {\\ \indent \normalsize \bfseries \coorientationlabel: \mdseries \cosupname}}
 	\vfill
 	% Assinaturas
 	% Nota para editor: Com o tabular conseguimos controlar espaços na página.
