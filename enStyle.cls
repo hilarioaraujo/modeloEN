@@ -203,6 +203,8 @@
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
 
+\counterwithout*{footnote}{chapter} % Don't reset the footnotes per chapter
+
 %----------------------------------------------------------------------------------------
 
 \newcommand{\checktoopen}{% New command to move content to the next page which prints to the next odd page if twosided mode is active  
@@ -720,6 +722,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 }
 
 \newcommand{\printappendixes}{%
+	\appendixheadreset
 	\ifthenelse{\isundefined\enStyle@appendix@list}{}%
 		{\renewcommand{\appendixtocname}{\appendixnamepl}%
          \cleardoublepage\appendix\addappheadtotoc%
